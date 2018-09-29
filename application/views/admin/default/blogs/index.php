@@ -27,8 +27,8 @@
                                 <td><?php echo $post['username']?></td>
 		                        <td><?php echo $post_status[$post['status']]?></td>
 		                        <td>
-		                        	<a href="<?php echo site_url('admin/posts/edit/'.$post['id'])?>"><span class="badge bg-green">edit</span></a>
-		                        	<a href="<?php echo site_url('admin/posts/delete/'.$post['id'])?>" onclick="return confirm('Are you sure?')"><span class="badge bg-red">delete</span></a>
+		                        	<a href="<?php echo site_url('admin/blogs/edit/'.$post['id'])?>"><span class="badge bg-green">edit</span></a>
+		                        	<a href="<?php echo site_url('admin/blogs/delete/'.$post['id'])?>" onclick="return confirm('Are you sure?')"><span class="badge bg-red">delete</span></a>
 		                        </td>
 		                    </tr>
                     	<?php endforeach;?>
