@@ -67,11 +67,6 @@
                                     <li><a href="<?php echo site_url('admin/groups')?>"><i class="fa fa-angle-double-right"></i> Groups</a></li>
                                 </ul>
                             </li>
-                            <li class="<?php echo ($parent_menu == 'contact')? 'active' : '' ?>">
-                                <a href="<?php echo site_url('admin/contacts')?>">
-                                    <i class="fa fa-address-card" aria-hidden="true"></i> <span>Contacts </span>
-                                </a>
-                            </li>
                             <li class="<?php echo ($parent_menu == 'page')? 'active' : '' ?>">
                                 <a href="<?php echo site_url('admin/pages')?>">
                                     <i class="fa fa-file" aria-hidden="true"></i> <span>Static Page</span>
