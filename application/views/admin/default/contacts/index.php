@@ -9,9 +9,9 @@
             	<!--<p><?php /*echo $count*/?></p>-->
                 <table class="table table-bordered">
                     <tr>
-                        <th style="width: 10px">#</th>
                         <th>Id</th>
                         <th>Name</th>
+                        <th>Email</th>
                         <th>Suject</th>
                         <th>Content</th>
                         <th style="width: 100px">Action</th>

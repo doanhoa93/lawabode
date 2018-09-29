@@ -12,11 +12,11 @@
                     <input style="display: none" id="id" name="id" value="<?php echo set_value('id', isset($contact['id']) ? $contact['id'] : '') ?>"/>
                     <div class="form-group">
                         <label for="post_name">Name</label>
-                        <input type="text" name="name" class="form-control" id="post_name" placeholder="name" value="<?php echo set_value('name', isset($contact['name']) ? $contact['name'] : '') ?>">
+                        <input disabled="true" type="text" name="name" class="form-control" id="post_name" placeholder="name" value="<?php echo set_value('name', isset($contact['name']) ? $contact['name'] : '') ?>">
                     </div>
                     <div class="form-group">
                         <label for="post_mail_to">Mail to</label>
-                        <input type="text" name="mail" class="form-control" id="mail" value="<?php echo set_value('email', isset($contact['email']) ? $contact['email'] : '') ?>">
+                        <input disabled="true" type="text" name="mail" class="form-control" id="mail" value="<?php echo set_value('email', isset($contact['email']) ? $contact['email'] : '') ?>">
                     </div>
                     <div class="form-group">
                         <label for="post_subject">Subject</label>

@@ -8,7 +8,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12 slide-content  win-min-height">
-                                    <header class="slide-heading2" style="text-align: center; float: left">
+                                    <header class="slide-heading2">
                                         <h1><?php echo $slider['title']?></h1>
                                     </header>
                                 </div>

@@ -43,12 +43,12 @@
                             echo form_dropdown('category[]',$categories,null,array('class' => 'select2 form-control','multiple' => true));
                         ?>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="post_status">Tags</label>
                         <?php
                             echo form_dropdown('tag[]',$tags,null,array('class' => 'select2-tags form-control','multiple' => true));
                         ?>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="post_status">Show on home page</label>
                         <?php echo form_checkbox('show_home_page', '1', FALSE, 'id="show_home_page"');?>
