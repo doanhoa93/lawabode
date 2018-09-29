@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $allowed_domains = array('127.0.0.1','localhost');
-$default_domain  = 'https://lawabode.herokuapp.com/';
+$default_domain  = 'lawabode.herokuapp.com';
 if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE))
 {
     $domain = '127.0.0.1/lawabode';
