@@ -1,64 +1,44 @@
 <div class="row">
-    <div class="col-md-12">
-         <!-- general form elements -->
+<div class="row">
+	<div class="col-md-12">
+		 <!-- general form elements -->
         <div class="box box-primary">
             <div class="box-header">
-                <h3 class="box-title">Edit Post</h3>
+                <h3 class="box-title">New Blogs</h3>
             </div>
             <!-- form start -->
-            <form role="form" action="<?php echo site_url('admin/posts/edit')?>" method="post">
-                <input type="hidden" name="id" value="<?php echo $post['id']?>">
+            <form role="form" action="<?php echo site_url('admin/blogs/add')?>" method="post">
                 <div class="box-body">
                     <?php echo message_box(validation_errors(),'danger'); ?>
                     <div class="form-group">
                         <label for="post_name">Title</label>
-                        <input type="text" name="title" class="form-control" id="post_name" placeholder="Title" value="<?php echo set_value('title', isset($post['title']) ? $post['title'] : '') ?>">
+                        <input type="text" name="title" class="form-control" id="post_name" placeholder="Title" value="<?php echo set_value('title');?>">
                     </div>
                     <div class="form-group">
                         <label for="post_body">Body</label>
-                        <textarea name="body" class="form-control txteditor" id="post_body" placeholder="Body" rows="10"><?php echo set_value('body', isset($post['body']) ? $post['body'] : '') ?></textarea>
+                        <textarea name="body" class="form-control txteditor" id="post_body" placeholder="Body" rows="10"><?php echo set_value('body');?></textarea>
                     </div>
                     <div class="form-group">
                         <label for="post_status">Featured Image</label>
-                        <input type="hidden" name="featured_image" value="<?php echo set_value('featured_image', isset($post['featured_image']) ? $post['featured_image'] : '') ?>" id="featured_image">
-                        <div class="preview_featured_image">
-                            <?php if(!empty($post['featured_image'])):?>
-                                <img src="<?php echo BASE_URI.$post['featured_image']?>" class="img-responsive thumbnail" onclick="removeFeaturedImage()" style="width:150px;height:150px;cursor:pointer">
-                            <?php endif;?>
-                        </div>
+                        <input type="hidden" name="featured_image" value="<?php echo set_value('featured_image');?>" id="featured_image">
+                        <div class="preview_featured_image"></div>
                         <div class="set_featured_image">
                             <a type="button" style="cursor:pointer" class="btnShowAssets" data-toggle="modal" data-target="#assetsModal">Set Featured Image</a>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="post_name">Publish Date</label>
-                        <input type="text" name="published_at" class="form-control datepicker"  data-date-format="yyyy-mm-dd" id="post_name" placeholder="Publish Date" value="<?php echo set_value('published_at', isset($post['published_at']) ? $post['published_at'] : '') ?>">
+                        <input type="text" name="published_at" class="form-control datepicker" data-date-format="yyyy-mm-dd" id="publish_date" placeholder="Publish Date" value="<?php echo set_value('published_at');?>">
                     </div>
                     <?php if($this->ion_auth->is_admin()):?>
                     <div class="form-group">
                         <label for="post_status">Status</label>
                         <?php
-                            echo form_dropdown('status',$post_status, set_value('status', isset($post['status']) ? $post['status'] : ''),array('class' => 'form-control'));
+                            echo form_dropdown('status',$post_status,set_value('status'),array('class' => 'form-control'));
                         ?>
                     </div>
                     <?php endif;?>
-                    <div class="form-group">
-                        <label for="post_status">Categories</label>
-                        <?php
-                            echo form_dropdown('category[]',$categories,$category_ids,array('class' => 'select2 form-control','multiple' => true));
-                        ?>
-                    </div>
-                    <!--<div class="form-group">
-                        <label for="post_status">Tags</label>
-                        <?php
-/*                            echo form_dropdown('tag[]',$tags,$tag_ids,array('class' => 'select2-tags form-control','multiple' => true));
-                        */?>
-                    </div>-->
-                    <div class="form-group">
-                        <label for="post_status">Show on home page</label>
-                        <?php echo form_checkbox('show_home_page', '1', FALSE, 'id="show_home_page"');?>
-                    </div>
-                </div><!-- /.box-body -->
+                </div>
 
                 <div class="box-footer">
 					<div class="align-center">
@@ -68,7 +48,7 @@
                 </div>
             </form>
         </div><!-- /.box -->
-    </div>
+	</div>
 </div>
 
 <!-- Modal -->

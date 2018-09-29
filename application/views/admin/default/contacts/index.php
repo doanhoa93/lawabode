@@ -12,7 +12,7 @@
                         <th>Id</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Suject</th>
+                        <th>Subject</th>
                         <th>Content</th>
                         <th style="width: 100px">Action</th>
                     </tr>

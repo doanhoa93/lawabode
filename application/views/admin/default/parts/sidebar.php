@@ -46,8 +46,11 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu" <?php echo ($parent_menu == 'post')? 'style="display:block"' : 'style="display:none"' ?>>
-                                <li><a href="<?php echo site_url('admin/posts/add')?>"><i class="fa fa-angle-double-right"></i> New Post</a></li>
-                                <li><a href="<?php echo site_url('admin/posts/')?>"><i class="fa fa-angle-double-right"></i> All Posts</a></li>
+                                <li><a href="<?php echo site_url('admin/posts/add')?>"><i class="fa fa-angle-double-right"></i> Create news</a></li>
+                                <li><a href="<?php echo site_url('admin/posts/')?>"><i class="fa fa-angle-double-right"></i> All news</a></li>
+
+                                <li><a href="<?php echo site_url('admin/blogs/add')?>"><i class="fa fa-angle-double-right"></i> Create blogs</a></li>
+                                <li><a href="<?php echo site_url('admin/blogs/')?>"><i class="fa fa-angle-double-right"></i> All blogs</a></li>
                                 <?php if(in_array('admin',$current_groups)):?>
                                     <li><a href="<?php echo site_url('admin/categories')?>"><i class="fa fa-angle-double-right"></i> Categories</a></li>
                                 <?php endif;?>

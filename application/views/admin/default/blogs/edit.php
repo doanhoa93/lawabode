@@ -3,10 +3,10 @@
          <!-- general form elements -->
         <div class="box box-primary">
             <div class="box-header">
-                <h3 class="box-title">Edit Post</h3>
+                <h3 class="box-title">Edit Blog</h3>
             </div>
             <!-- form start -->
-            <form role="form" action="<?php echo site_url('admin/posts/edit')?>" method="post">
+            <form role="form" action="<?php echo site_url('admin/blogs/edit')?>" method="post">
                 <input type="hidden" name="id" value="<?php echo $post['id']?>">
                 <div class="box-body">
                     <?php echo message_box(validation_errors(),'danger'); ?>
@@ -42,22 +42,6 @@
                         ?>
                     </div>
                     <?php endif;?>
-                    <div class="form-group">
-                        <label for="post_status">Categories</label>
-                        <?php
-                            echo form_dropdown('category[]',$categories,$category_ids,array('class' => 'select2 form-control','multiple' => true));
-                        ?>
-                    </div>
-                    <!--<div class="form-group">
-                        <label for="post_status">Tags</label>
-                        <?php
-/*                            echo form_dropdown('tag[]',$tags,$tag_ids,array('class' => 'select2-tags form-control','multiple' => true));
-                        */?>
-                    </div>-->
-                    <div class="form-group">
-                        <label for="post_status">Show on home page</label>
-                        <?php echo form_checkbox('show_home_page', '1', FALSE, 'id="show_home_page"');?>
-                    </div>
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
