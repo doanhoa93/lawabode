@@ -40,7 +40,7 @@ class Blogs extends MY_Controller {
         endif;
         $this->data['pagination'] = $this->bootstrap_pagination($config);
         
-		$this->load_admin('posts/index');
+		$this->load_admin('blogs/index');
 	}
 
 	public function add(){
