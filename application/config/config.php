@@ -23,8 +23,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+$allowed_domains = array('127.0.0.1','localhost');
+$default_domain  = 'https://lawabode.herokuapp.com/';
+if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE))
+{
+    $domain = '127.0.0.1/lawabode';
+} else {
+    $domain = $default_domain;
+}
 
-$config['base_url'] = 'https://lawabode.herokuapp.com/'
+if ( ! empty($_SERVER['HTTPS'])) {
+    $config['base_url'] = 'https://'.$domain;
+} else {
+    $config['base_url'] = 'http://'.$domain;
+}
 /*
 |--------------------------------------------------------------------------
 | Index File
