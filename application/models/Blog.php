@@ -13,10 +13,6 @@ class Blog extends CI_Model{
 
 
 	function find($limit = null, $offset = 0, $user_id = null, $q = null){
-// 		SELECT pt.post_id AS `post_id`, GROUP_CONCAT(t.tag) AS `tags`
-// FROM post_tags AS pt
-// INNER JOIN tags AS t ON pt.tag_id = t.tag_id
-// GROUP BY `post_id`
 		$this->db->select('posts.*,users.username');
         $this->db->join('users', 'users.id = posts.user_id');
         if ($q != null) {
@@ -33,12 +29,8 @@ class Blog extends CI_Model{
         return $query->result_array();
 	}
 
-	function find_active($limit = null, $offset = 0, $q = null){
-		$this->db->select('posts.*,users.username');
-        $this->db->join('users', 'users.id = posts.user_id');
-        if ($q != null) {
-            $this->db->like('title', $q);
-        }
+	function find_active($limit = null, $offset = 0){
+		$this->db->select('posts.*');
         $this->db->where('status',1);
         $this->db->where('type','blog');
         $this->db->limit($limit, $offset);
@@ -49,14 +41,12 @@ class Blog extends CI_Model{
 	}
 
     function find_active_show_home_page($limit = null, $offset = 0, $q = null){
-        $this->db->select('posts.*,users.username');
-        $this->db->join('users', 'users.id = posts.user_id');
+        $this->db->select('posts.*');
         if ($q != null) {
             $this->db->like('title', $q);
         }
         $this->db->where('status',1);
         $this->db->where('type','blog');
-        $this->db->where('show_home_page',1);
         $this->db->limit($limit, $offset);
         $this->db->order_by('published_at', 'desc');
         $query = $this->db->get($this->table);
