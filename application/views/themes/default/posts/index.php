@@ -38,20 +38,20 @@
             <?php echo $pagination;?>
         <?php else:?>
         <?php endif; ?>
-        <!--<aside class="col-sm-4 col-md-3 col-xs-12" id="sidebar">
+        <aside class="col-sm-4 col-md-3 col-xs-12" id="sidebar">
             <nav class="widget latest-widget">
-                <?php /*if ($posts): */?>
+                <?php if ($posts): ?>
                     <h2>lATEST Posts</h2>
                     <ul class="latest-post-nav list-unstyled">
-                        <?php /*foreach ($posts as $post): */?>
+                        <?php foreach ($posts as $post): ?>
                             <li>
-                                <a href="<?php /*echo site_url('/')*/?>read/<?php /*echo $post['slug']*/?>"><?php /*echo $post['title']*/?></a>
+                                <a href="<?php echo site_url('/')?>read/<?php echo $post['slug']?>"><?php echo $post['title']?></a>
                             </li>
-                        <?php /*endforeach; */?>
+                        <?php endforeach; ?>
                     </ul>
-                <?php /*else:*/?>
-                <?php /*endif; */?>
+                <?php else:?>
+                <?php endif;?>
             </nav>
-        </aside>-->
+        </aside>
     </div>
 </section>

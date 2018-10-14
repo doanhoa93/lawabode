@@ -3,7 +3,7 @@
 		 <!-- general form elements -->
         <div class="box box-primary">
             <div class="box-header">
-                <h3 class="box-title">New Page</h3>
+                <h3 class="box-title">New Customer</h3>
             </div>
             <!-- form start -->
             <form role="form" action="<?php echo site_url('admin/customers/add')?>" method="post">

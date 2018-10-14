@@ -24,7 +24,8 @@ class Posts extends My_Controller {
 	}
 
 	public function read($slug){
-		$this->data['page_layout'] = 'single'; 
+		$this->data['page_layout'] = 'single';
+        $this->data['posts'] = $this->Post->find_last_post(5,0);
 		$this->data['post'] = $this->Post->find_by_slug($slug);
 		$this->data['page_title'] = $this->data['post']['title'];
 		$this->load_theme('posts/read');

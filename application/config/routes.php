@@ -59,6 +59,7 @@ $route['admin'] = 'admin/dashboard';
 $route['signout'] = 'users/signout';
 $route['signin'] = 'users/signin';
 $route['signup'] = 'users/signup';
+$route['associates'] = 'associates';
 $route['services'] = 'services';
 $route['galleries'] = 'galleries';
 $route['contacts'] = 'contacts';

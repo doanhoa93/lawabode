@@ -15,6 +15,10 @@
                         <input type="text" name="title" class="form-control" id="post_name" placeholder="Title" value="<?php echo set_value('title', isset($post['title']) ? $post['title'] : '') ?>">
                     </div>
                     <div class="form-group">
+                        <label for="post_url">Url</label>
+                        <input type="text" name="url" class="form-control" id="url" placeholder="Url" value="<?php echo set_value('url',isset($post['url']) ? $post['url'] : '');?>">
+                    </div>
+                    <div class="form-group">
                         <label for="post_body">Body</label>
                         <textarea name="body" class="form-control txteditor" id="post_body" placeholder="Body" rows="10"><?php echo set_value('body', isset($post['body']) ? $post['body'] : '') ?></textarea>
                     </div>
